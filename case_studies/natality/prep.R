@@ -4,6 +4,7 @@ library(readr)
 library(dplyr)
 library(tidyr)
 library(readxl)
+installed.packages('readxl')
 
 # Path to the data files
 pa = "/home/kshedden/data/Teaching/natality"
@@ -11,9 +12,9 @@ pa = "/home/kshedden/data/Teaching/natality"
 # Subset the demographics file to 2016.  This only needs to
 # be run once.  Change the next line to read 'if (TRUE)' to
 # run this section of code.
-if (FALSE) {
+if (TRUE) {
     f = sprintf("%s/us.1990_2020.19ages.txt.gz", pa)
-    g = sprintf("%s/2016ages.txt.gz", pa)
+    g = sprintf("%s/2016.txt", pa)
     inc = gzfile(f)
     otc = gzfile(g, "w")
 
